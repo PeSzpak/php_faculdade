@@ -7,9 +7,18 @@
 // Repeticoes: 10 (multiplicador de 1 ate 10)
 // Calculo em cada repeticao: numero x multiplicador
 // Estrutura: for (simples)
+//validacao de so numero so de raiva 
 
 echo 'Informe um numero: ';
-$numero = (int) readline();
+$entrada = trim(readline());
+
+// Validacao: aceita apenas numeros inteiros.
+if (filter_var($entrada, FILTER_VALIDATE_INT) === false) {
+    echo 'Valor invalido. Digite apenas numeros inteiros.' . PHP_EOL;
+    exit;
+}
+
+$numero = (int) $entrada;
 
 echo PHP_EOL;
 

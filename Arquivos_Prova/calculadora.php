@@ -5,17 +5,26 @@
 // Convertidos para numero: numeros de entrada (float).
 // Decisoes: qual operacao foi informada (+, -, *, /) ou invalida.
 // Validacao antes da divisao: segundo numero diferente de zero.
+//adicionada a validacao para apenas numeros
 
 echo 'Primeiro numero: ';
-$primeiroNumero = (float) readline();
+$primeiroNumero = str_replace(',', '.', trim(readline()));
 
 echo 'Segundo numero: ';
-$segundoNumero = (float) readline();
+$segundoNumero = str_replace(',', '.', trim(readline()));
 
 echo 'Operacao (+, -, *, /): ';
 $operacao = trim(readline());
 
 echo PHP_EOL;
+
+if (!is_numeric($primeiroNumero) || !is_numeric($segundoNumero)) {
+    echo 'Valor invalido. Digite apenas numeros.' . PHP_EOL;
+    exit;
+}
+
+$primeiroNumero = (float) $primeiroNumero;
+$segundoNumero = (float) $segundoNumero;
 
 switch ($operacao) {
     case '+':

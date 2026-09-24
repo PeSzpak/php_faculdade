@@ -43,10 +43,18 @@ function cadastrarCulturas($quantidadeCulturas)
         $nome = readline();
 
         echo 'Quantidade produzida (kg): ';
-        $quantidadeKg = (float) readline();
+        $quantidadeKg = str_replace(',', '.', trim(readline()));
 
         echo 'Valor estimado de venda por kg (R$): ';
-        $valorPorKg = (float) readline();
+        $valorPorKg = str_replace(',', '.', trim(readline()));
+
+        if (!is_numeric($quantidadeKg) || !is_numeric($valorPorKg)) {
+            echo 'Registro invalido (digite apenas numeros). Ignorado.' . PHP_EOL;
+            continue;
+        }
+
+        $quantidadeKg = (float) $quantidadeKg;
+        $valorPorKg = (float) $valorPorKg;
 
         if ($quantidadeKg <= 0 || $valorPorKg <= 0) {
             echo 'Registro invalido (quantidade e valor por kg devem ser maiores que zero). Ignorado.' . PHP_EOL;
@@ -130,9 +138,9 @@ echo 'Nome do responsavel: ';
 $responsavel = readline();
 
 echo 'Quantas culturas serao registradas? ';
-$quantidadeCulturas = (int) readline();
+$quantidadeCulturas = trim(readline());
 
-if ($quantidadeCulturas <= 0) {
+if (filter_var($quantidadeCulturas, FILTER_VALIDATE_INT) === false || $quantidadeCulturas <= 0) {
     echo 'Quantidade de culturas invalida. Encerrando.' . PHP_EOL;
     exit;
 }
