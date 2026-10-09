@@ -7,26 +7,41 @@ noite e um glossário explicando as tags e os termos de TI usados no código.
 ## Como executar qualquer arquivo
 
 ```bash
-php nome_do_arquivo.php
+php 04-condicionais/missao01_classificacao.php
 ```
 
 Os programas leem dados digitados pelo usuário com `readline()`, então
 rode sempre pelo terminal (não pelo navegador).
 
-## Módulos do curso e onde cada um está neste repositório
+## Estrutura do repositório
 
-| Módulo | Conteúdo | Arquivo(s) |
-|---|---|---|
-| Aquecimento da noite — Senac Tour | Orçamento de viagem: entrada, processamento e saída organizados em funções | `orcamento_viagem.php` |
-| Exercício 2 — AutoTech | Orçamento de serviço automotivo (mão de obra, peça, materiais, parcelamento em 3x) | `orcamento_autotech.php` (`AutoTech_Etapas_1_2.docx` é o enunciado com a interpretação das Etapas 1 e 2) |
-| Exercício 3 — Missões da Noite (condicionais) | Estruturas condicionais, operadores relacionais e lógicos, validação de dados | `missao01_classificacao.php`, `missao02_situacao_academica.php`, `missao03_estacionamento.php`, `missao04_emprestimo.php`, `missao05_pedido_delivery.php` |
-| Exercício 4 — Repetição | Contador, acumulador, condição de parada, `for` e `while` | `exercicio1_contagem.php`, `exercicio2_tabuada.php`, `exercicio3_soma.php`, `exercicio4_media.php`, `exercicio5_analise_turma.php` |
-| Exercício 5 — Desafio da Noite (arrays, foreach, funções) | Arrays indexados e associativos, `foreach`, modularização em funções | pasta `ExercicioArraysForeach/` (10 missões, de lista de funcionários a mini sistema de vendas) |
-| Desafio Final do 1º Bimestre — SENAC Market | Sistema de venda completo: cadastro de produtos, descontos cumulativos, parcelamento e relatório gerencial | `senac_market.php` (código) e `senac_market_documentacao.md` (interpretação do problema) |
+Cada pasta é um módulo do curso, numerada na ordem em que foi visto:
 
-Os arquivos `hello_world.php`, `cartao_apresentacao.php` e
-`calculadora_media_notas.php` são exercícios introdutórios de aulas
-anteriores a essa lista e não fazem parte de nenhum dos módulos acima.
+```
+php_class/
+├── 01-introducao/        primeiros exercícios (hello world, cartão, média de notas)
+├── 02-senac-tour/        aquecimento: orçamento de viagem
+├── 03-autotech/          orçamento de serviço automotivo + enunciado
+├── 04-condicionais/      missões da noite com if/else e operadores lógicos
+├── 05-repeticao/         for, while, contador e acumulador
+├── 06-arrays-foreach/    10 missões com arrays, foreach e funções
+├── 07-senac-market/      desafio final do 1º bimestre
+│   └── modular/          mesma solução dividida por responsabilidade
+└── 08-prova/             tabuada, calculadora e controle de colheita
+```
+
+## Módulos do curso
+
+| Pasta | Módulo | Conteúdo | Arquivos |
+|---|---|---|---|
+| `01-introducao/` | Aulas introdutórias | Primeiro contato com `echo`, variáveis e `readline()` | `hello_world.php`, `cartao_apresentacao.php`, `calculadora_media_notas.php` |
+| `02-senac-tour/` | Aquecimento da noite — Senac Tour | Orçamento de viagem: entrada, processamento e saída organizados em funções | `orcamento_viagem.php` |
+| `03-autotech/` | Exercício 2 — AutoTech | Orçamento de serviço automotivo (mão de obra, peça, materiais, parcelamento em 3x) | `orcamento_autotech.php`, `enunciado_etapas_1_2.docx` (interpretação das Etapas 1 e 2) |
+| `04-condicionais/` | Exercício 3 — Missões da Noite | Estruturas condicionais, operadores relacionais e lógicos, validação de dados | `missao01` a `missao05` |
+| `05-repeticao/` | Exercício 4 — Repetição | Contador, acumulador, condição de parada, `for` e `while` | `exercicio1` a `exercicio5` |
+| `06-arrays-foreach/` | Exercício 5 — Desafio da Noite | Arrays indexados e associativos, `foreach`, modularização em funções | `missao01` a `missao10` (de lista de funcionários a mini sistema de vendas) |
+| `07-senac-market/` | Desafio Final do 1º Bimestre — SENAC Market | Sistema de venda completo: cadastro de produtos, descontos cumulativos, parcelamento e relatório gerencial | `senac_market.php` (código), `documentacao.md` (interpretação do problema), `relatorio_final.docx`, pasta `modular/` (versão separada em `cadastro.php`, `calculo.php`, `exibicao.php`) |
+| `08-prova/` | Prova | Exercícios de prova com validação de entrada numérica | `tabuada.php`, `calculadora.php`, `sistema-controle-colheita.php` |
 
 ## Glossário de tags, expressões e termos de TI
 
