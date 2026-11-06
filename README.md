@@ -27,7 +27,9 @@ php_class/
 ├── 06-arrays-foreach/    10 missões com arrays, foreach e funções
 ├── 07-senac-market/      desafio final do 1º bimestre
 │   └── modular/          mesma solução dividida por responsabilidade
-└── 08-prova/             tabuada, calculadora e controle de colheita
+├── 08-prova/             tabuada, calculadora e controle de colheita
+└── 2bim/                 2º bimestre: formulários web, POST e banco de dados
+    └── cadastro-produtos/ cadastro de produtos com PDO e prepared statement
 ```
 
 ## Módulos do curso
@@ -42,6 +44,7 @@ php_class/
 | `06-arrays-foreach/` | Exercício 5 — Desafio da Noite | Arrays indexados e associativos, `foreach`, modularização em funções | `missao01` a `missao10` (de lista de funcionários a mini sistema de vendas) |
 | `07-senac-market/` | Desafio Final do 1º Bimestre — SENAC Market | Sistema de venda completo: cadastro de produtos, descontos cumulativos, parcelamento e relatório gerencial | `senac_market.php` (código), `documentacao.md` (interpretação do problema), `relatorio_final.docx`, pasta `modular/` (versão separada em `cadastro.php`, `calculo.php`, `exibicao.php`) |
 | `08-prova/` | Prova | Exercícios de prova com validação de entrada numérica | `tabuada.php`, `calculadora.php`, `sistema-controle-colheita.php` |
+| `2bim/cadastro-produtos/` | Exercício da noite — Cadastro de Produtos | Formulário web, validação no PHP, PDO, `INSERT` com prepared statement e parâmetros nomeados (roda no navegador com `php -S`) | `index.php`, `conexao.php`, `banco.sql`, `README.md` |
 
 ## Glossário de tags, expressões e termos de TI
 
