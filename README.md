@@ -59,6 +59,7 @@ php_class/
 | `2bim/exercicios-formularios/` | Exercícios 08/10 | Receber, preservar, validar, processar, decidir e apresentar | `ex1_cadastro_aluno.php`, `ex2_calculadora_media.php`, `ex3_simulador_pedido.php` |
 | `2bim/inscricao-eventtech/` | Missão da Noite 22/10 — EventTech | `trim`, `filter_var` + `FILTER_VALIDATE_EMAIL`, `if/elseif/else`, `??`, `htmlspecialchars` com `ENT_QUOTES` | `inscricao.php` |
 | Repositório [desafio_php_senac](https://github.com/PeSzpak/desafio_php_senac) | Desafio da Noite 29/10 — Portal do Aluno | Sessões, mensagens flash, `include`/`require_once`, logout | `portal_aluno/` + `TESTES.md` |
+| Repositório [universidade-abissal](https://github.com/PeSzpak/universidade-abissal) | Projeto final 12/11 — My Crazy University | Site em PHP + MySQL com 2 CRUDs, pesquisa `LIKE`, filtros, ordenação e paginação | ver README do repositório |
 | `2bim/cadastro-produtos/` | Exercício da noite — Cadastro de Produtos | Formulário web, validação no PHP, PDO, `INSERT` com prepared statement e parâmetros nomeados (roda no navegador com `php -S`) | `index.php`, `conexao.php`, `banco.sql`, `README.md` |
 
 ## Glossário de tags, expressões e termos de TI
