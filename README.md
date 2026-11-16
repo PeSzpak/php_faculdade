@@ -13,6 +13,14 @@ php 04-condicionais/missao01_classificacao.php
 Os programas leem dados digitados pelo usuário com `readline()`, então
 rode sempre pelo terminal (não pelo navegador).
 
+Os exercícios do 2º bimestre (`2bim/`) são páginas web. Suba o servidor
+embutido e abra o arquivo no navegador:
+
+```bash
+php -S localhost:8000 -t 2bim
+# http://localhost:8000/inscricao-eventtech/inscricao.php
+```
+
 ## Estrutura do repositório
 
 Cada pasta é um módulo do curso, numerada na ordem em que foi visto:
@@ -28,8 +36,11 @@ php_class/
 ├── 07-senac-market/      desafio final do 1º bimestre
 │   └── modular/          mesma solução dividida por responsabilidade
 ├── 08-prova/             tabuada, calculadora e controle de colheita
-└── 2bim/                 2º bimestre: formulários web, POST e banco de dados
-    └── cadastro-produtos/ cadastro de produtos com PDO e prepared statement
+└── 2bim/                     2º bimestre: formulários web, POST e banco de dados
+    ├── aula-formularios/     exemplos de aula: formulário com GET e com POST
+    ├── exercicios-formularios/ 08/10: cadastro de aluno, média e simulador de pedido
+    ├── inscricao-eventtech/  22/10: inscrição com validação e preservação dos dados
+    └── cadastro-produtos/    05/11: cadastro de produtos com PDO e prepared statement
 ```
 
 ## Módulos do curso
@@ -44,6 +55,10 @@ php_class/
 | `06-arrays-foreach/` | Exercício 5 — Desafio da Noite | Arrays indexados e associativos, `foreach`, modularização em funções | `missao01` a `missao10` (de lista de funcionários a mini sistema de vendas) |
 | `07-senac-market/` | Desafio Final do 1º Bimestre — SENAC Market | Sistema de venda completo: cadastro de produtos, descontos cumulativos, parcelamento e relatório gerencial | `senac_market.php` (código), `documentacao.md` (interpretação do problema), `relatorio_final.docx`, pasta `modular/` (versão separada em `cadastro.php`, `calculo.php`, `exibicao.php`) |
 | `08-prova/` | Prova | Exercícios de prova com validação de entrada numérica | `tabuada.php`, `calculadora.php`, `sistema-controle-colheita.php` |
+| `2bim/aula-formularios/` | Aula — Formulários | Exemplos de `GET` e `POST` mostrando o valor de volta no campo | `formulario_get.php`, `formulario_post.php` |
+| `2bim/exercicios-formularios/` | Exercícios 08/10 | Receber, preservar, validar, processar, decidir e apresentar | `ex1_cadastro_aluno.php`, `ex2_calculadora_media.php`, `ex3_simulador_pedido.php` |
+| `2bim/inscricao-eventtech/` | Missão da Noite 22/10 — EventTech | `trim`, `filter_var` + `FILTER_VALIDATE_EMAIL`, `if/elseif/else`, `??`, `htmlspecialchars` com `ENT_QUOTES` | `inscricao.php` |
+| Repositório [desafio_php_senac](https://github.com/PeSzpak/desafio_php_senac) | Desafio da Noite 29/10 — Portal do Aluno | Sessões, mensagens flash, `include`/`require_once`, logout | `portal_aluno/` + `TESTES.md` |
 | `2bim/cadastro-produtos/` | Exercício da noite — Cadastro de Produtos | Formulário web, validação no PHP, PDO, `INSERT` com prepared statement e parâmetros nomeados (roda no navegador com `php -S`) | `index.php`, `conexao.php`, `banco.sql`, `README.md` |
 
 ## Glossário de tags, expressões e termos de TI
