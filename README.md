@@ -21,6 +21,65 @@ php -S localhost:8000 -t 2bim
 # http://localhost:8000/inscricao-eventtech/inscricao.php
 ```
 
+## Exemplos em execução
+
+Programa de terminal (`08-prova/sistema-controle-colheita.php`), com o que foi digitado depois de cada pergunta:
+
+```text
+$ php 08-prova/sistema-controle-colheita.php
+==================================================
+        SISTEMA DE CONTROLE DE COLHEITA
+==================================================
+Codigo da colheita: COL-4584
+Data: 20/11/2026
+
+Nome do responsavel: Joana Prado
+Quantas culturas serao registradas? 2
+
+--- Cultura 1 de 2 ---
+Nome da cultura: Milho
+Quantidade produzida (kg): 1200
+Valor estimado de venda por kg (R$): 1,85
+
+--- Cultura 2 de 2 ---
+Nome da cultura: Soja
+Quantidade produzida (kg): 800
+Valor estimado de venda por kg (R$): 2,40
+==================================================
+              CULTURAS CADASTRADAS
+==================================================
+Cultura: Milho
+  Quantidade produzida: 1.200,00 kg
+  Valor por kg: R$ 1,85
+  Valor estimado da producao: R$ 2.220,00
+  Classificacao: PRODUCAO DE PEQUENO PORTE
+--------------------------------------------------
+Cultura: Soja
+  ...
+==================================================
+                  RESUMO GERAL
+==================================================
+Responsavel: Joana Prado
+Quantidade de culturas validas: 2
+Quantidade total produzida: 2.000,00 kg
+Valor total estimado da colheita: R$ 4.140,00
+Classificacao da colheita: PRODUCAO DE PEQUENO PORTE
+```
+
+Páginas web do 2º bimestre (`php -S localhost:8000 -t 2bim`, dados fictícios):
+
+| EventTech: validação no servidor | EventTech: inscrição aceita | Cadastro de produtos (PDO + MySQL) |
+|---|---|---|
+| ![Erro de e-mail inválido, com os campos preservados](docs/media/eventtech-erro.webp) | ![Inscrição realizada com sucesso](docs/media/eventtech-sucesso.webp) | ![Produto gravado no MySQL](docs/media/cadastro-produtos.webp) |
+
+O `cadastro-produtos` precisa do banco `loja` (`2bim/cadastro-produtos/banco.sql`). Sem XAMPP, dá para usar um MySQL em Docker e apontar a conexão pela variável `DB_DSN`:
+
+```bash
+docker run -d --name mysql-loja -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -p 3307:3306 mysql:8.4
+docker exec -i mysql-loja mysql -uroot < 2bim/cadastro-produtos/banco.sql   # espere o MySQL subir antes
+DB_DSN="mysql:host=127.0.0.1;port=3307;dbname=loja;charset=utf8mb4" php -S localhost:8000 -t 2bim
+```
+
 ## Estrutura do repositório
 
 Cada pasta é um módulo do curso, numerada na ordem em que foi visto:
