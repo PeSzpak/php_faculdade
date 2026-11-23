@@ -1,8 +1,9 @@
 # PHP Class
 
-Repositório de estudos da disciplina de Programação (PHP), com aplicações
-executadas pelo terminal. Reúne os exercícios de cada aula, os desafios da
-noite e um glossário explicando as tags e os termos de TI usados no código.
+Exercícios de PHP da disciplina **Tecnologias para Internet** (ADS, Senac São José dos Pinhais).
+No 1º bimestre são programas de terminal; no 2º, páginas web com formulários
+e MySQL. Reúne os exercícios de cada aula, os desafios da noite e um glossário
+explicando as tags e os termos de TI usados no código.
 
 ## Como executar qualquer arquivo
 
